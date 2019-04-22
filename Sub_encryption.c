@@ -14,7 +14,7 @@ int main()
     if (inputFile == NULL) {
         printf("Failed to open\n");
         
-        cipher(text, i);
+    else cipher(text, i);
         
         return(0);
     }
@@ -48,7 +48,8 @@ int main()
             case "X": char text[i]="M"; break;
             case "Y": char text[i]="P"; break;
             case "Z": char text[i]="K"; break;
-                
+            default: printf("Error with reading file");
+            
                 i++;
                 printf("Encrypted text: %s\n", text);
             }    
