@@ -14,14 +14,15 @@ int main()
     if (inputFile == NULL) {
         printf("Failed to open\n");
         
-        cipher(text, i);
+    else cipher(text, i);
         
         return(0);
     }
 
     void cipher(char text[], int i) {  
-    switch (text) { 
-        while (text[i] != '\0') { 
+        while (text = fgetc(inputFile)) != EOF) {
+            switch (text) {
+                
             case "A": char text[i]="T"; break;
             case "B": char text[i]="S"; break;
             case "C": char text[i]="O"; break;
@@ -48,7 +49,8 @@ int main()
             case "X": char text[i]="M"; break;
             case "Y": char text[i]="P"; break;
             case "Z": char text[i]="K"; break;
-                
+            default: printf("Error with reading file");
+            
                 i++;
                 printf("Encrypted text: %s\n", text);
             }    
