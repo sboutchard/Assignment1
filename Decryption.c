@@ -11,7 +11,7 @@ int main() {
         scanf("%d", &key);
 
         printf("Enter text to decrypt (CAPS ONLY):");
-        scanf("%s", text);
+        scanf(" %[^\n]s ", text);
         
         decrypt(text, key);
          
