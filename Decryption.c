@@ -18,11 +18,13 @@ int main() {
   return 0;
 }
 
-void decrypt(char text[], int key);
+void decrypt(char text[], int key) {
 
-    for(int i=0; text[i] != '\0'; i++)
-        text[i] = 65 + (text[i]-65-key)%26; //subtract the key in order to decrypt
-        printf("Encrypted text: %s\n", text);
+    for(int i=0; text[i] != '\0'; i++) {
+        if(text[i]>='A' && text[i]<='Z') {
+        text[i] = 65 + (text[i]+65-key)%26; //subtract the key in order to decrypt
+        }
+    }
+        printf("\nDecrypted text: %s", text);
 }
-
 
