@@ -13,7 +13,7 @@ int main()
     
     FILE *input;
     input=*fopen(*File_Encrypt, "r");
-    while (text = fgetc(inputFile)) != EOF) {
+        while (text = fgetc(inputFile)) != EOF) {
     }
     
     encrypt(text);
@@ -35,7 +35,7 @@ void encrypt(char text[]) {
         if( text[i] >= 'A' && text[i] <= 'Z'){
             text[i] = def[ (int)text[i] - (int)'A'];
         }else if(text[i] == ' '){
-            //NOTHING
+            //Nothing
         }else{
             printf("Error with reading file\n");
             return;
